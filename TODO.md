@@ -21,7 +21,18 @@
       driven by adversarial-01; structure validated by 4/4 runs; name kept)
 - [x] Run blind A/B: skill-equipped agent vs. vanilla agent on the same business
       question; log winner and reasons in `eval/results.md`
-      (done 2026-09-24: Brief A = vanilla won Cindy's blind pick; Brief B = skill lost)
+      (done 2026-09-24, two rounds: round 1 pick VOIDED — Cindy clicked before
+      reading; round 2 on a causal-measurement question: **vanilla won** —
+      Brief D preferred for brevity; feedback: lead with key metric, success
+      criteria, tradeoff framework; drop the word "canon"; skill brief felt
+      comprehensive but hard to grasp)
+- [x] Iterate on `SKILL.md` from A/B feedback → v0.2.0 (done 2026-09-24):
+      decision vs. measurement brief modes; answer-first structure;
+      key metric / success criteria / tradeoff framework up front;
+      3–6 condensed paper notes instead of 5–10 full briefs;
+      "canon" replaced with "established research"; rubric updated to match
+- [ ] Re-run blind A/B with the v0.2.0 skill vs. vanilla on a fresh question
+      (decision-mode this time) to test whether the rewrite closes the gap
 
 ## Website
 

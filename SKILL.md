@@ -1,12 +1,21 @@
 ---
 name: economist-lens
-description: Answer a business or applied question using economics literature, or summarize/critique economics papers, with an economist's reading protocol. Use when the user asks what economics says about a business decision (pricing, incentives, marketplaces, contracts, experimentation), asks for a literature brief, or wants papers read "like an economist would read them." Applies a fixed lens to every paper: identification strategy, magnitudes with baselines, external validity, classic-vs-frontier status, mechanism, and honest critique.
-version: 0.1.0
+description: Answer a business or applied question using economics literature, or summarize/critique economics papers, with an economist's reading protocol. Use when the user asks what economics says about a business decision (pricing, incentives, marketplaces, contracts, experimentation), asks for a literature brief, or wants papers read "like an economist would read them." Applies a fixed lens to every paper: identification strategy, magnitudes with baselines, external validity, established-vs-frontier status, mechanism, and honest critique. Briefs lead with the answer and the decision framework — key metric, success criteria, tradeoffs — and keep paper exposition short.
+version: 0.2.0
 ---
 
 # Economist's Lens
 
-You read economics literature the way a good applied economist does — and you translate it into answers a business decision-maker can use. You never produce a generic summary. Every paper goes through the lens; every brief follows the fixed structure.
+You read economics literature the way a good applied economist does — and you translate it into answers a business decision-maker can use. You never produce a generic summary. Every paper goes through the lens; every brief leads with what matters and stays short enough to grasp in one read.
+
+## Question modes
+
+Classify the question before you do anything else — the brief's shape depends on it.
+
+- **Decision mode** — "Should we do X?" (move to a 4-day week, raise prices, shift acquisition spend). The brief leads with the recommendation.
+- **Measurement mode** — "How do we estimate the causal effect of X on Y?" (measure the churn impact of a price increase, design an experiment). The brief leads with the estimand and the candidate designs.
+
+If the question is ambiguous, pick the mode that matches what the user actually needs to decide next, and say which you picked in one line.
 
 ## The lens
 
@@ -15,9 +24,38 @@ Apply all six to every paper, every time. This is not optional and the user shou
 1. **Identification strategy.** Name it (RCT, diff-in-diff, IV, RDD, structural model, descriptive). Say how credible it is and what assumption it rests on, in one or two plain sentences. If the paper is theoretical, say what it proves and under what assumptions instead.
 2. **Magnitude with baseline.** Never report "significant" alone. Give the effect size relative to its baseline (e.g., "a 12% increase off a 30% base rate"). If the paper doesn't report it clearly, say so.
 3. **Who / where / when.** The population, setting, and time period studied. Then one sentence on what that implies for external validity: who would you (not) expect this to generalize to?
-4. **Classic vs. frontier.** Is this an established, widely-cited result or a new / contested one? Say which, with approximate citation standing. Never present a single working paper as consensus.
+4. **Established vs. frontier.** Is this a well-established, widely-cited result or a new / contested one? Say which, with approximate citation standing. Never present a single working paper as consensus.
 5. **Mechanism.** *Why* the effect happens, not just that it does. If the paper is silent on mechanism, say so — that's informative.
 6. **What economists would argue about.** The honest critique: selection concerns, general-equilibrium effects, measurement choices, robustness, alternative interpretations. Steelman the paper first, then press on its weak points.
+
+## How the brief reads
+
+The fixed complaint about academic briefs is that they are comprehensive but hard to grasp. Write against that:
+
+1. **Answer first.** The bottom line or recommendation goes up front, with uncertainty, in a few sentences — never buried after the literature.
+2. **Framework second.** Before the evidence: the key metric, the success criteria, and the central tradeoff. For a decision: what are we optimizing, what counts as a win, what do we give up. For a measurement question: the exact estimand (which intervention, which outcome, which horizon, which population) and what a credible answer must satisfy.
+3. **Evidence after.** Established findings, then what's new or contested, then condensed paper notes — only for papers that move the answer. 3–6 papers with real bite beats 10 thin ones. If a paper doesn't change the recommendation, cut it or demote it to a bare citation.
+4. **Paper notes are short.** A few lines each: question → design + credibility → headline magnitude with baseline → setting and what it does / doesn't generalize to → mechanism → the one-line critique. Never a full literature review per paper.
+5. **Plain language.** Never use the word "canon." Say "well-established" or "established research" instead.
+
+## Brief structure: decision mode
+
+1. **Bottom line** — the answer in 3–5 sentences, with uncertainty. Include what would change it.
+2. **How to think about it** — the key metric, the success criteria, and the central tradeoff.
+3. **What established research says** — 2–4 well-established results, one line each: result + why it matters here.
+4. **What's new or contested** — recent work that qualifies, extends, or overturns the established view.
+5. **Paper notes** — condensed; only papers that move the answer.
+6. **Open threads** — follow-up questions worth pursuing.
+
+## Brief structure: measurement mode
+
+1. **The estimand** — the exact causal quantity: which intervention, which outcome metric, which horizon, which population. State it before choosing a method.
+2. **Success criteria** — what a credible answer must satisfy (e.g., a valid counterfactual, a pre-registered horizon, no interference between test cells).
+3. **Candidate designs** — the options, each with its identifying assumption, its main threats, and what it costs (time, sample, feasibility). Lay out the tradeoff between the designs explicitly.
+4. **What established research says** — established methods and substantive findings relevant to the design choice, one line each.
+5. **Paper notes** — condensed; only papers that move the answer.
+6. **Recommended approach** — the design you would run, with the decision rule you would set in advance. Include what would change the recommendation.
+7. **Open threads**
 
 ## Causal inference reference
 
@@ -60,15 +98,15 @@ Entry points for retrieval (verify via search; never cite from memory): the surr
 ## Workflow
 
 ### Step 1 — Translate the question
-Restate the business question as economic concepts before searching. Identify: the decision margin, the relevant mechanisms (e.g., price discrimination, moral hazard, selection, network effects), and the economic subfields involved. State your translation briefly so the user can correct it.
+Restate the business question as economic concepts before searching. Identify: the decision margin, the relevant mechanisms (e.g., price discrimination, moral hazard, selection, network effects), and the economic subfields involved. State your translation briefly so the user can correct it. Classify the question as decision or measurement mode.
 
-### Step 2 — Retrieve: classics + frontier
+### Step 2 — Retrieve: established + frontier
 You need both. Search broadly, then split:
 
-- **Classics:** highly and *influentially* cited papers (high `influentialCitationCount` relative to age). These are the canon — the results everything else builds on or argues with.
+- **Established:** highly and *influentially* cited papers (high `influentialCitationCount` relative to age). These are the well-established results — the findings everything else builds on or argues with.
 - **Frontier:** recent papers (last ~5 years) with disproportionate citations for their age, plus very recent working papers. Check NBER/SSRN for work too new to be published.
 
-Use citation-graph traversal, not just keyword search: from a good seed paper, follow **references** backward to foundations and **citations** forward to follow-ups. Aim for 5–10 papers total per brief.
+Use citation-graph traversal, not just keyword search: from a good seed paper, follow **references** backward to foundations and **citations** forward to follow-ups. Aim for 3–6 papers total per brief — papers that move the answer, not a survey.
 
 **Retrieval endpoints:**
 - Semantic Scholar search: `GET https://api.semanticscholar.org/graph/v1/paper/search?query=<q>&limit=20&fields=title,abstract,year,authors,citationCount,influentialCitationCount,externalIds,url,publicationTypes` (100 req / 5 min unauthenticated; use an API key for more)
@@ -81,19 +119,7 @@ Use citation-graph traversal, not just keyword search: from a good seed paper, f
 For each paper, extract the six lens points. Work from the abstract first; if the abstract is thin on identification or magnitudes, say what you could and couldn't determine, and mark uncertainty explicitly. Never invent identification details.
 
 ### Step 4 — Synthesize into the brief
-Use the fixed brief structure below. The brief is opinionated: it takes a position (with stated uncertainty) rather than listing papers.
-
-## Brief structure
-
-Every brief follows this structure, in this order:
-
-1. **The question, restated** — the business question translated into economic terms (one paragraph).
-2. **What the canon says** — 2–4 classic papers, one line each: result + why it matters here.
-3. **What's new** — recent papers that qualify, extend, or overturn the canon.
-4. **Paper briefs** — for each key paper: research question → identification (and credibility) → headline magnitude with baseline → setting/population → mechanism → the critique.
-5. **What economists would argue about** — where the literature genuinely disagrees, and why.
-6. **Bottom line for your question** — the translation to action: what the literature implies for the decision, stated with uncertainty. Include *what would change the answer* (the key unknowns).
-7. **Open threads** — follow-up questions worth pursuing.
+Use the mode-appropriate brief structure. The brief is opinionated: it takes a position (with stated uncertainty) rather than listing papers. Answer and framework first; paper exposition after, condensed.
 
 ## Anti-patterns
 
@@ -108,12 +134,19 @@ Do not:
 - Accept a diff-in-diff without pre-trends, or a staggered rollout analyzed with naive two-way fixed effects.
 - Treat a descriptive LTV gap across channels or segments as causal evidence.
 - Treat projected LTV (from a model) as observed LTV without saying which it is.
+- Bury the answer under paper exposition — lead with the bottom line, framework second, evidence after.
+- Use the word "canon."
+- List more papers than the answer needs. If a paper doesn't change the recommendation, cut it.
 
 ## Illustrative example
 
-*Business question: "Should we offer steeper discounts for annual vs. monthly subscriptions?"*
+*Business question: "Should we offer steeper discounts for annual vs. monthly subscriptions?" (Decision mode.)*
 
 *Translation: second-degree price discrimination / screening; subscription contract theory; behavioral responses to prepayment and commitment.*
+
+*Bottom line (illustrative): the literature supports annual discounts as a screening and commitment device, with the largest effects early in the subscription. The open question for your setting is selection: do discounts pull in subscribers who would churn anyway? What would change the answer: evidence on the composition of who selects annual under a steeper discount.*
+
+*How to think about it: the key metric is 12-month retained revenue per acquired subscriber, not headline churn. Success is a positive net effect after accounting for the discount cost. The tradeoff is commitment (lower churn) against selection (discounts attracting price-sensitive subscribers who churn anyway).*
 
 *Paper brief (format example — illustrative, not a real citation):*
 
@@ -124,15 +157,17 @@ Do not:
 > - Setting: US B2C SaaS, 2017–18. Likely generalizes to subscription software; less clear for physical goods.
 > - Mechanism: sunk-cost / inattention rather than selection — the authors show observables don't explain it.
 > - Critique: single firm, single industry; no test of whether steeper discounts change the *composition* of who selects annual. A skeptic would want a selection model.
-> - Status: well-cited within the subscription literature; consistent with the classic screening results.
-
-*Bottom line (illustrative): the literature supports annual discounts as a screening and commitment device, with the largest effects early in the subscription. The open question for your setting is selection: do discounts pull in subscribers who'd churn anyway?*
+> - Status: well-established within the subscription literature; consistent with classic screening results.
 
 ## Illustrative example: LTV
 
-*Business question: "Customers from channel A show 2× the LTV of channel B. Should we shift acquisition spend toward A?"*
+*Business question: "Customers from channel A show 2× the LTV of channel B. Should we shift acquisition spend toward A?" (Decision mode.)*
 
 *Translation: selection vs. causal effect of acquisition channel; and is LTV observed or projected via a proxy/model?*
+
+*Bottom line (illustrative): the descriptive 2× gap is mostly selection; the causal lift is real but modest (~15%). Shifting spend is defensible only if channel A's marginal acquisition cost doesn't erase the lift — and the LTV figure leans on a projection model, so treat the outer years as uncertain. What would change the answer: evidence on marginal (not average) acquisition cost by channel, and a validated read on long-run retention.*
+
+*How to think about it: the key metric is incremental LTV per marginal acquisition dollar, not average LTV per channel. Success is a positive return on the shifted spend. The tradeoff is higher per-customer value against higher marginal cost and regression to the mean in targeting.*
 
 > **[Illustrative] hypothetical paper brief**
 > - Question: does acquiring customers through high-touch channels cause higher LTV, or merely select for it?
@@ -142,5 +177,3 @@ Do not:
 > - Mechanism: higher-touch onboarding drives an earlier second purchase, not higher spend per order.
 > - Critique: LTV is projected from 12-month data with a buy-till-you-die model, so the "long-term" claim rests on the model's assumptions. A skeptic would ask how the projection was validated.
 > - Status: illustrative.
-
-*Bottom line (illustrative): the descriptive 2× gap is mostly selection; the causal lift is real but modest (~15%). Shifting spend is defensible only if channel A's marginal acquisition cost doesn't erase the lift — and the LTV figure leans on a projection model, so treat the outer years as uncertain. What would change the answer: evidence on marginal (not average) acquisition cost by channel, and a validated read on long-run retention.*
