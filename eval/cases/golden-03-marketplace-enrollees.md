@@ -8,11 +8,9 @@
 
 Donohue, Julie M., Eros Papademetriou, Rochelle R. Henderson, Sharon Glave Frazee, Christine Eibner, Andrew W. Mulcahy, Ateev Mehrotra, Shivum Bharill, **Can Cui**, Bradley D. Stein, and Walid F. Gellad. "Early Marketplace Enrollees Were Older and Used More Medication Than Later Enrollees; Marketplaces Pooled Risk." *Health Affairs* 34(6), 2015, 1049–56.
 
-> **DRAFT — written by Ace from the published abstract and press coverage. For Cindy to verify, correct, and sharpen — especially design details, magnitudes, and the "marketplaces pooled risk" interpretation.**
-
 ## Ground truth
 
-- **Design / method:** **Descriptive — no causal identification.** Cross-sectional comparisons using pharmacy claims: (1) early vs. late marketplace enrollees, (2) all marketplace enrollees vs. an employer-sponsored insurance comparison group. Medication use is used as an early proxy for health status / risk. This case is deliberately a *descriptive* paper: the skill must describe it accurately without inventing a design.
+- **Design / method:** **Descriptive — no causal identification.** Cross-sectional comparisons using pharmacy claims: (1) early vs. late marketplace enrollees, (2) all marketplace enrollees vs. an employer-sponsored insurance comparison group. Medication use is used as an early proxy for health status / risk. This case is deliberately a *descriptive* paper: the skill must describe it accurately without inventing a design. The value of this study is to provide early evidence at that time based actual insurance claims data to inform policy discussions.
 
 - **Estimand:** N/A (descriptive). Reported contrasts: differences in age, average drug spending, and likelihood of using specific medication classes between early and late enrollees, and between marketplace and employer-sponsored enrollees.
 
@@ -22,7 +20,7 @@ Donohue, Julie M., Eros Papademetriou, Rochelle R. Henderson, Sharon Glave Fraze
 
 - **Mechanism:** Selection into *timing* of enrollment: people with greater health needs (older, more medication use) had more to gain and enrolled first — pent-up demand / adverse selection on the enrollment margin. At the market level, though, the pool looked *healthier* than the previously insured on drug spending ("marketplaces pooled risk") — with risk concentrated in specific high-cost conditions (HIV, hepatitis C), plausibly reflecting previously uninsured people gaining access to expensive specialty drugs.
 
-- **Known threats — what the referees pushed on:** [INFERRED — Cindy to confirm/correct] Likely pressure points: (1) **Medication use ≠ health status** — it's a proxy, affected by access and benefit design, not just need. (2) **Observation-window confounding** — early enrollees are observed for more months (Jan–Sep window), mechanically inflating their measured medication use vs. late enrollees. (3) **Express Scripts ≠ all marketplace enrollees** — selection into the PBM's data. (4) **Employer-sponsored comparison** — the two populations differ on age, income, and employment by construction. (5) Descriptive only: can't separate pent-up demand from selection, or say what the *next* year's pool will look like.
+- **Known threats — what the referees pushed on:** (1) **Medication use ≠ health status** — it's a proxy, affected by access and benefit design, not just need. (2) **Observation-window confounding** — early enrollees are observed for more months (Jan–Sep window), mechanically inflating their measured medication use vs. late enrollees. (3) **Express Scripts ≠ all marketplace enrollees** — selection into the PBM's data. (4) **Employer-sponsored comparison** — the two populations differ on age, income, and employment by construction. (5) Descriptive only: can't separate pent-up demand from selection, or say what the *next* year's pool will look like.
 
 - **Classic vs. frontier:** Early ACA-evaluation literature — one of the first empirical looks at the actual risk pool of the 2014 marketplaces, published while the ink was still wet (June 2015). Descriptive but influential; it spoke directly to the live policy fear of marketplace adverse-selection death spirals. Related canon: the ACA adverse-selection / mandate literature (e.g., Hackmann–Kolstad–Kowalski 2015; Kowalski on the individual mandate). Frontier-at-the-time; now a historical baseline for later marketplace risk-pool studies.
 
@@ -30,4 +28,4 @@ Donohue, Julie M., Eros Papademetriou, Rochelle R. Henderson, Sharon Glave Fraze
 
 ## Expected retrieval
 
-TODO (suggestions to confirm): ACA marketplace adverse-selection literature — Hackmann–Kolstad–Kowalski (2015); Kowalski (2014) on the mandate; later marketplace risk-pool / risk-adjustment studies as frontier.
+ACA marketplace adverse-selection literature — Hackmann–Kolstad–Kowalski (2015); Kowalski (2014) on the mandate; later marketplace risk-pool / risk-adjustment studies as frontier.
