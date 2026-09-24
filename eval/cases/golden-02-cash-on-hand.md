@@ -4,7 +4,7 @@
 
 "Should we expand credit / BNPL access to cash-constrained customers? What does the evidence say about cash on hand and demand for credit?"
 
-## Paper (ground truth — you wrote it)
+## Paper (ground truth)
 
 Cui, Can. "Cash-on-hand and demand for credit." *Empirical Economics* 52(3), 2017, 1007–1039. (Single-authored.)
 
