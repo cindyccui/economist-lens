@@ -31,7 +31,7 @@
       key metric / success criteria / tradeoff framework up front;
       3–6 condensed paper notes instead of 5–10 full briefs;
       "canon" replaced with "established research"; rubric updated to match
-- [ ] Re-run blind A/B with the v0.2.0 skill vs. vanilla on a fresh question
+- [ ] Re-run blind A/B with the v0.2.1 skill vs. vanilla on a fresh question
       (decision-mode this time) to test whether the rewrite closes the gap
 
 ## Website

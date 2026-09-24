@@ -1,7 +1,7 @@
 ---
 name: economist-lens
 description: Answer a business or applied question using economics literature, or summarize/critique economics papers, with an economist's reading protocol. Use when the user asks what economics says about a business decision (pricing, incentives, marketplaces, contracts, experimentation), asks for a literature brief, or wants papers read "like an economist would read them." Applies a fixed lens to every paper: identification strategy, magnitudes with baselines, external validity, established-vs-frontier status, mechanism, and honest critique. Briefs lead with the answer and the decision framework — key metric, success criteria, tradeoffs — and keep paper exposition short.
-version: 0.2.0
+version: 0.2.1
 ---
 
 # Economist's Lens
@@ -34,9 +34,11 @@ The fixed complaint about academic briefs is that they are comprehensive but har
 
 1. **Answer first.** The bottom line or recommendation goes up front, with uncertainty, in a few sentences — never buried after the literature.
 2. **Framework second.** Before the evidence: the key metric, the success criteria, and the central tradeoff. For a decision: what are we optimizing, what counts as a win, what do we give up. For a measurement question: the exact estimand (which intervention, which outcome, which horizon, which population) and what a credible answer must satisfy.
-3. **Evidence after.** Established findings, then what's new or contested, then condensed paper notes — only for papers that move the answer. 3–6 papers with real bite beats 10 thin ones. If a paper doesn't change the recommendation, cut it or demote it to a bare citation.
-4. **Paper notes are short.** A few lines each: question → design + credibility → headline magnitude with baseline → setting and what it does / doesn't generalize to → mechanism → the one-line critique. Never a full literature review per paper.
-5. **Plain language.** Never use the word "canon." Say "well-established" or "established research" instead.
+3. **Evidence after — and every paper earns its place by connecting back to the question.** Established findings, then what's new or contested, then condensed paper notes — only for papers that move the answer. 3–6 papers with real bite beats 10 thin ones. A brief that lists literature without saying what each paper implies for *this* question is not productive: each note ends with what it means for the question at hand. If you can't write that sentence, cut the paper.
+4. **Paper notes are short.** A few lines each: question → design + credibility → headline magnitude with baseline → setting and what it does / doesn't generalize to → mechanism → the one-line critique → **what this means for the question** (one sentence, the payoff). Never a full literature review per paper.
+5. **Don't say everything twice.** The "established research" one-liners give the result and why it matters; the paper note for the same paper adds only what the one-liner didn't — design credibility, magnitude, caveat. Never repeat the same sentence in both places.
+6. **Write for skimming.** Short paragraphs, one sharp paragraph over two loose ones. The answer and the reasoning should land from the first two sections alone.
+7. **Plain language.** Never use the word "canon." Say "well-established" or "established research" instead.
 
 ## Brief structure: decision mode
 
@@ -158,6 +160,7 @@ Do not:
 > - Mechanism: sunk-cost / inattention rather than selection — the authors show observables don't explain it.
 > - Critique: single firm, single industry; no test of whether steeper discounts change the *composition* of who selects annual. A skeptic would want a selection model.
 > - Status: well-established within the subscription literature; consistent with classic screening results.
+> - What this means for the question: annual discounts should cut early churn, but price the discount against the selection risk — the marginal annual subscriber is the one most likely to churn anyway.
 
 ## Illustrative example: LTV
 
@@ -177,3 +180,4 @@ Do not:
 > - Mechanism: higher-touch onboarding drives an earlier second purchase, not higher spend per order.
 > - Critique: LTV is projected from 12-month data with a buy-till-you-die model, so the "long-term" claim rests on the model's assumptions. A skeptic would ask how the projection was validated.
 > - Status: illustrative.
+> - What this means for the question: don't shift spend on the 2× descriptive gap — underwrite it on the ~15% causal lift against marginal acquisition cost.

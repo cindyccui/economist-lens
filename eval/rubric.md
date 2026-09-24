@@ -19,7 +19,7 @@ Score each run 0–2 per dimension unless noted. Be strict: the skill claims to 
 - **Retrieval (0–2):** 0 = missed the expected established literature; 1 = found some established work or some frontier; 2 = found the expected established literature **and** relevant frontier.
 - **Honesty (0–2):** 0 = hallucinated specifics (estimates, designs, citations you can't trace); 1 = minor unverified claims; 2 = every specific traceable to the paper, gaps explicitly marked.
 - **Translation (0–2):** 0 = no bottom line for the business question; 1 = bottom line without uncertainty; 2 = bottom line **plus** what would change the answer.
-- **Structure (0–1):** follows the mode-appropriate brief structure (decision vs. measurement) or not.
+- **Structure (0–1):** follows the mode-appropriate brief structure (decision vs. measurement), connects each paper back to the question, and doesn't repeat the same content across sections.
 
 ## Totals
 
