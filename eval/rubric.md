@@ -16,10 +16,10 @@ Score each run 0–2 per dimension unless noted. Be strict: the skill claims to 
 
 ## Per brief
 
-- **Retrieval (0–2):** 0 = missed the expected established literature; 1 = found some established work or some frontier; 2 = found the expected established literature **and** relevant frontier.
-- **Honesty (0–2):** 0 = hallucinated specifics (estimates, designs, citations you can't trace); 1 = minor unverified claims; 2 = every specific traceable to the paper, gaps explicitly marked.
+- **Retrieval (0–2):** 0 = missed the expected established literature; 1 = found some established work or some frontier; 2 = found the expected established literature **and** relevant frontier (plus related industry practice where the question calls for it).
+- **Honesty (0–2):** 0 = hallucinated specifics (estimates, designs, citations you can't trace); 1 = minor unverified claims; 2 = every specific traceable to the paper, gaps explicitly marked, industry sources labeled as unreviewed.
 - **Translation (0–2):** 0 = no bottom line for the business question; 1 = bottom line without uncertainty; 2 = bottom line **plus** what would change the answer.
-- **Structure (0–1):** follows the mode-appropriate brief structure (decision vs. measurement), connects each paper back to the question, and doesn't repeat the same content across sections.
+- **Structure (0–1):** follows the mode-appropriate brief structure (decision vs. measurement), connects each paper back to the question, doesn't repeat content across sections, and uses plain economist/DS diction with no AI mannerisms.
 
 ## Totals
 
