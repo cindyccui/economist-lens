@@ -13,6 +13,7 @@ How to tell whether the economist-lens skill works.
 ## Case types
 
 - **Golden** (`golden-*`): your own papers. You are the ground truth — the stubs have TODOs for your expert notes (design, estimand, magnitudes, and crucially what the referees pushed on). These test lens fidelity against reality.
+- **Canonical** (`canonical-*`): famous, textbook-stable papers anyone can score — one per design card (Card & Krueger for DiD, Angrist & Krueger for IV/LATE, LaLonde for selection-on-observables, Abadie et al. for synthetic control, Bloom et al. for RCT, Lee for RDD) plus IO cases outside your research area (BLP for structural demand/WTP, Allcott for nudge-vs-price). Ground truth is literature consensus; drafts are written, you review and veto/swap.
 - **Adversarial** (`adversarial-*`): synthetic fixtures with known traps. Fully written, no prep needed. These test whether the skill catches the failure modes it was built to catch.
 
 ## Blind A/B (the demo that doubles as eval)
