@@ -30,7 +30,7 @@ Use this when extracting or judging a paper's empirical strategy. The brief shou
 - **LATE** — effect on *compliers*: the subgroup whose treatment status the instrument or experiment actually moved. Common with imperfect compliance and IV. Does not generalize to always-takers or never-takers.
 - **ITT** — effect of *assignment*, regardless of take-up. The policy-relevant number when you cannot force compliance.
 
-Rule for translation: a LATE estimated on compliers is not the expected impact of a full rollout. Name the estimand before applying the number to the business question.
+Rule for translation: a LATE estimated on compliers is not the expected impact of a full rollout. Name the estimand before applying the number to the business question. When a study reports both a LATE and the first-stage take-up gap, back out the implied ITT (LATE × first-stage gap) — that per-person-offered number is what a nudge/encouragement rollout decision actually needs.
 
 ### Design cards: assumption + what to check
 

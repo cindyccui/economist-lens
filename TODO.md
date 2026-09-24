@@ -10,13 +10,18 @@
       Card & Krueger (DiD), Angrist & Krueger (IV/LATE), LaLonde (selection),
       Abadie et al. (synthetic control), Bloom et al. (RCT), Lee (RDD),
       BLP (structural demand/WTP), Allcott (nudge vs. price) — veto or swap any paper
-- [ ] Run the 4 adversarial cases: `eval/cases/adversarial-01-late-as-ate.md`,
+- [x] Run the 4 adversarial cases: `eval/cases/adversarial-01-late-as-ate.md`,
       `adversarial-02-did-pitfalls.md`, `adversarial-03-descriptive-ltv.md`,
       `adversarial-04-working-paper-hype.md` — no prep needed;
       score with `eval/rubric.md`, log in `eval/results.md`
-- [ ] Iterate on the `SKILL.md` draft — react to open decisions (name, structure, examples)
-- [ ] Run blind A/B: skill-equipped agent vs. vanilla agent on the same business
+      (done 2026-09-24: all four scored 20/21; sole deduction was Magnitude
+      because each vignette withheld baselines, honestly flagged each time)
+- [x] Iterate on the `SKILL.md` draft — react to open decisions (name, structure, examples)
+      (done 2026-09-24: added ITT back-out rule — LATE × first-stage gap —
+      driven by adversarial-01; structure validated by 4/4 runs; name kept)
+- [x] Run blind A/B: skill-equipped agent vs. vanilla agent on the same business
       question; log winner and reasons in `eval/results.md`
+      (done 2026-09-24: Brief A = vanilla won Cindy's blind pick; Brief B = skill lost)
 
 ## Website
 
