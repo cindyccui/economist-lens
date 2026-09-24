@@ -30,7 +30,7 @@ The tradeoff: credibility rises from D to A; speed and feasibility run the other
 
 ## 4. What established research says
 
-- Price responses grow over time: a dollars-borrowed elasticity of −1.1 in year one, −2.9 in year three (Karlan & Zinman 2020). Fix the window before reading results.
+- Price responses grow over time: a dollars-borrowed elasticity of −1.1 in year one, −2.9 in year three (Karlan & Zinman 2019). Fix the window before reading results.
 - Subscribers disengage before they cancel: gym members wait an average 2.3 months between their last visit and contract termination, paying $185 in monthly fees in between (DellaVigna & Malmendier 2006). Track usage, not just cancellation.
 - How the price is presented changes the response: posting tax-inclusive prices cut grocery demand 8% in a three-week field experiment (Chetty, Looney & Kroft 2009). Standardize the announcement across arms, or randomize the framing.
 - Staggered rollouts need group-time ATTs estimated under conditional parallel trends (Callaway & Sant'Anna 2021). A pooled two-way fixed-effects regression misestimates effects that differ across cohorts.
