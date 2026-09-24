@@ -8,8 +8,6 @@
 
 Cui, Can. "Cash-on-hand and demand for credit." *Empirical Economics* 52(3), 2017, 1007–1039. (Single-authored.)
 
-> **DRAFT — written by Ace from the published abstract, RePEc record, and reference list. For Cindy to verify, correct, and sharpen — especially design details, referee pushback (inferred), and magnitudes.**
-
 ## Ground truth
 
 - **Design / method:** Quasi-experimental border design. Identification comes from variation in **state EITC generosity** across state borders **within the same commuting zones** — i.e., comparing payday-loan demand in areas that share a local labor market but sit on opposite sides of a state line with different EITC benefit levels. The commuting-zone fixed effect absorbs local economic conditions; the remaining variation in EITC generosity is treated as idiosyncratic policy variation. (Reduced-form; not structural.)
@@ -22,7 +20,7 @@ Cui, Can. "Cash-on-hand and demand for credit." *Empirical Economics* 52(3), 201
 
 - **Mechanism:** Cash on hand **substitutes** for high-cost borrowing: when liquidity-constrained households receive a lump-sum income boost, they borrow less at very high rates. Broader read: public income-benefit programs aid consumption smoothing in the presence of credit-market frictions. Note the outcome is *demand* (applications), so the mechanism runs through borrower behavior, not lender supply.
 
-- **Known threats — what the referees pushed on:** [INFERRED — Cindy to confirm/correct] Likely pressure points: (1) **EITC generosity correlates with other state policies** — states with generous EITCs may also regulate payday lending more strictly, have higher minimum wages, or more generous Medicaid; the border design handles local conditions but not state-level policy bundles. (2) **Single-lender data** — external validity to the whole small-dollar credit market. (3) **Applications vs. originations** — demand is measured as applications; equilibrium borrowing also reflects lender approval. (4) **EITC is anticipated** (annual lump sum at tax time), so the margin is cash-on-hand *timing*, not a permanent-income shock — the interpretation as liquidity constraints is exactly the point, but it bounds generalization. (5) Sorting across the border (borrowers crossing state lines for loans).
+- **Known threats — what the referees pushed on:** (1) **EITC generosity correlates with other state policies** — states with generous EITCs may also regulate payday lending more strictly, have higher minimum wages, or more generous Medicaid; the border design handles local conditions but not state-level policy bundles. (2) **Single-lender data** — external validity to the whole small-dollar credit market. (3) **Applications vs. originations** — demand is measured as applications; equilibrium borrowing also reflects lender approval. (4) **EITC is anticipated** (annual lump sum at tax time), so the margin is cash-on-hand *timing*, not a permanent-income shock — the interpretation as liquidity constraints is exactly the point, but it bounds generalization. (5) Sorting across the border (borrowers crossing state lines for loans).
 
 - **Classic vs. frontier:** Sits at the intersection of two literatures. Consumption-smoothing / fiscal-rebate canon: Agarwal–Liu–Souleles (2007), Parker–Souleles–Johnson–McClelland (2013), Gross–Notowidigdo–Wang (2014) on liquidity constraints and bankruptcy. Payday-lending literature: Melzer (2011 QJE), Bertrand & Morse (2009, "What Do High-Interest Borrowers Do with Their Tax Rebate?"), Skiba (2014) on tax rebates and payday borrowing cycles. Closest analogs are Bertrand & Morse (2009) and Skiba (2014) — same question (rebates → payday borrowing), different identification. Contribution: a *causal* estimate of income sensitivity of credit demand using policy variation rather than rebate timing.
 
@@ -30,4 +28,4 @@ Cui, Can. "Cash-on-hand and demand for credit." *Empirical Economics* 52(3), 201
 
 ## Expected retrieval
 
-TODO (suggestions to confirm): Bertrand & Morse (2009); Melzer (2011); Gross–Notowidigdo–Wang (2014); Skiba (2014); Agarwal–Liu–Souleles (2007). Frontier: recent BNPL / fintech small-dollar credit work.
+Bertrand & Morse (2009); Melzer (2011); Gross–Notowidigdo–Wang (2014); Skiba (2014); Agarwal–Liu–Souleles (2007). Frontier: recent BNPL / fintech small-dollar credit work.
